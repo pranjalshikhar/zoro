@@ -1,7 +1,12 @@
-import React from "react";
+import DataProvider from "./context/DataProvider";
+import Home from "./components/Home";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <DataProvider>
+      <Home />
+    </DataProvider>
+  );
 };
 
 export default App;
