@@ -1,7 +1,26 @@
-import React from "react";
+import { createContext, useState } from "react";
 
-const DataProvider = () => {
-  return <div>DataProvider</div>;
+export const DataContext = createContext(null);
+
+const DataProvider = ({ children }) => {
+  const [notes, setNotes] = useState([]);
+  const [archiveNotes, setArchiveNotes] = useState([]);
+  const [deleteNotes, setDeleteNotes] = useState([]);
+
+  return (
+    <DataContext.Provider
+      value={{
+        notes,
+        setNotes,
+        archiveNotes,
+        setArchiveNotes,
+        deleteNotes,
+        setDeleteNotes,
+      }}
+    >
+      {children}
+    </DataContext.Provider>
+  );
 };
 
 export default DataProvider;
