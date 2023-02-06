@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const list = [
   { id: 1, name: "Notes", icon: <Lightbulb />, route: "/" },
-  { id: 2, name: "Archives", icon: <Archive />, route: "/archives" },
+  { id: 2, name: "Archives", icon: <Archive />, route: "/archive" },
   { id: 3, name: "Trash", icon: <Delete />, route: "/delete" },
 ];
 
