@@ -21,7 +21,7 @@ const Note = ({ note }) => {
   const archiveNote = (note) => {
     const updatedNotes = notes.filter((data) => data.id !== note.id);
     setNotes(updatedNotes);
-    setDeleteNotes((prev) => [note, ...prev]);
+    setArchiveNotes((prev) => [note, ...prev]);
   };
   const deleteNote = (note) => {
     const updatedNotes = notes.filter((data) => data.id !== note.id);
@@ -32,7 +32,11 @@ const Note = ({ note }) => {
   return (
     <StyledCard>
       <CardContent>
-        <Typography>{note.heading}</Typography>
+        <Typography
+          style={{ fontWeight: "bold", fontSize: "25px", fontStyle: "italic" }}
+        >
+          {note.heading}
+        </Typography>
         <Typography>{note.text}</Typography>
       </CardContent>
       <CardActions>
@@ -41,11 +45,7 @@ const Note = ({ note }) => {
           style={{ marginLeft: "auto" }}
           onClick={() => archiveNote(note)}
         />
-        <Delete
-          fontSize="small"
-          style={{ marginLeft: "auto" }}
-          onClick={() => deleteNote(note)}
-        />
+        <Delete fontSize="small" onClick={() => deleteNote(note)} />
       </CardActions>
     </StyledCard>
   );

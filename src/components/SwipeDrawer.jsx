@@ -13,7 +13,7 @@ const openedMixin = (theme) => ({
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
   }),
-  overflowY: "hidden",
+  overflowX: "hidden",
 });
 
 const closedMixin = (theme) => ({
@@ -23,7 +23,7 @@ const closedMixin = (theme) => ({
   }),
   overflowX: "hidden",
   width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.ip("sm")]: {
+  [theme.breakpoints.up("sm")]: {
     width: `calc(${theme.spacing(9)} + 1px)`,
   },
 });

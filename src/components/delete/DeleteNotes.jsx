@@ -16,8 +16,8 @@ const DeleteNotes = () => {
       <Box sx={{ p: 3, width: "100%" }}>
         <DrawerHeader />
         <Grid container>
-          {deleteNotes.map((deleteNote) => (
-            <Grid item>
+          {deleteNotes.map((deleteNote, index) => (
+            <Grid item key={index}>
               <DeleteNote deleteNote={deleteNote} />
             </Grid>
           ))}

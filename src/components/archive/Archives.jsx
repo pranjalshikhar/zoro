@@ -16,8 +16,8 @@ const Archives = () => {
       <Box sx={{ p: 3, width: "100%" }}>
         <DrawerHeader />
         <Grid container>
-          {archiveNotes.map((archive) => (
-            <Grid item>
+          {archiveNotes.map((archive, index) => (
+            <Grid item key={index}>
               <Archive archive={archive} />
             </Grid>
           ))}
