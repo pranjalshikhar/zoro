@@ -29,7 +29,9 @@ const Archive = ({ archive }) => {
   return (
     <StyledCard>
       <CardContent>
-        <Typography>{archive.heading}</Typography>
+        <Typography style={{ fontWeight: "bold", fontSize: "25px" }}>
+          {archive.heading}
+        </Typography>
         <Typography>{archive.text}</Typography>
       </CardContent>
       <CardActions>
@@ -38,11 +40,7 @@ const Archive = ({ archive }) => {
           style={{ marginLeft: "auto" }}
           onClick={() => unArchiveNote(archive)}
         />
-        <Delete
-          fontSize="small"
-          style={{ marginLeft: "auto" }}
-          onClick={() => deleteNote(archive)}
-        />
+        <Delete fontSize="small" onClick={() => deleteNote(archive)} />
       </CardActions>
     </StyledCard>
   );

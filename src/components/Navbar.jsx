@@ -6,7 +6,7 @@ import {
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
-const list = [
+const navList = [
   { id: 1, name: "Notes", icon: <Lightbulb />, route: "/" },
   { id: 2, name: "Archives", icon: <Archive />, route: "/archive" },
   { id: 3, name: "Trash", icon: <Delete />, route: "/delete" },
@@ -15,10 +15,10 @@ const list = [
 const Navbar = () => {
   return (
     <List>
-      {list.map((item) => (
-        <ListItem button key={item.id}>
+      {navList.map((list) => (
+        <ListItem button key={list.id}>
           <Link
-            to={`${item.route}`}
+            to={`${list.route}`}
             style={{
               textDecoration: "none",
               display: "flex",
@@ -26,8 +26,9 @@ const Navbar = () => {
             }}
           >
             <ListItemIcon style={{ alignItems: "center" }}>
-              {item.icon}
+              {list.icon}
             </ListItemIcon>
+            <ListItemText primary={list.name} />
           </Link>
         </ListItem>
       ))}

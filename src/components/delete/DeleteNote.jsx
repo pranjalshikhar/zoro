@@ -35,7 +35,9 @@ const DeleteNote = ({ deleteNote }) => {
   return (
     <StyledCard>
       <CardContent>
-        <Typography>{deleteNote.heading}</Typography>
+        <Typography style={{ fontWeight: "bold", fontSize: "25px" }}>
+          {deleteNote.heading}
+        </Typography>
         <Typography>{deleteNote.text}</Typography>
       </CardContent>
       <CardContent>
