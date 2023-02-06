@@ -18,7 +18,7 @@ const Navbar = () => {
       {list.map((item) => (
         <ListItem button key={item.id}>
           <Link
-            to={`#{item.route}`}
+            to={`${item.route}`}
             style={{
               textDecoration: "none",
               display: "flex",
